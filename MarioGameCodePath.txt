@@ -1,0 +1,10 @@
+- Setting up IDE
+- Setting up Additional IDE SDL2
+- Coding for SDL Initialisation and getting Error Message
+- Setting window, window title, window size
+- Setting SDL_Renderer, SDL_Surfurface, SDL_Texture for display
+- Setting SDL_Rect needed for making source rectangle and destination rectangle
+- Setting up SDL2_images to include most types of images such as png, jpg and so on
+- Adding new folder "assets" in master folder "MarioGameProject" to add background image for title page
+- Setting the size of the image equal to the size of the window to set image as game main/base background image
+
