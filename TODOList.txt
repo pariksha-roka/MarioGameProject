@@ -1,3 +1,7 @@
 Finish assignment 1
 Drink all the spirits
+<<<<<<< HEAD
 Steal presents for Xmas
+=======
+Need to do something
+>>>>>>> ff30247c76108fda4e02dde1d1c301507e646277
