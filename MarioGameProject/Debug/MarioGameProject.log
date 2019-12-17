@@ -1,3 +1,5 @@
 ﻿  main.cpp
+d:\users\7019\documents\visual studio 2015\projects\mariogameproject\mariogameproject\main.cpp(105): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\documents\visual studio 2015\projects\mariogameproject\mariogameproject\main.cpp(106): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   MarioGameProject.vcxproj -> d:\Users\7019\Documents\Visual Studio 2015\Projects\MarioGameProject\Debug\MarioGameProject.exe
   MarioGameProject.vcxproj -> d:\Users\7019\Documents\Visual Studio 2015\Projects\MarioGameProject\Debug\MarioGameProject.pdb (Partial PDB)

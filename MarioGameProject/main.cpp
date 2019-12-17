@@ -59,6 +59,7 @@ int main(int argc, char **argv)
 	can acess their pixel data from code*/
 	// surfaces used for software rendering is not as fast as hardware
 	SDL_Surface* marioBackgroundSurface = IMG_Load("assets/BaseMarioBackground.png"); // CHANGE
+
 	
 	// CONVERTING SURFACE TO TEXTURE
 	/* Textures are stored in gfx cards vram and is used for Hardware 
@@ -67,6 +68,14 @@ int main(int argc, char **argv)
 	SDL_Texture* marioBackgroundTexture = SDL_CreateTextureFromSurface(renderer, marioBackgroundSurface); // CHANGE
 	// we don't need surface anymore, so let's free up memory
 	SDL_FreeSurface(marioBackgroundSurface); // CHANGE
+
+	// ADDING ALL THE IMAGES TO BE INCLUDED IN TITLE PAGE
+	SDL_Texture* marioHero = IMG_LoadTexture(renderer, "assets/MarioHero.png");
+	SDL_Texture* marioEnemy = IMG_LoadTexture(renderer, "assets/MarioEnemy.png");
+	SDL_Texture* marioPowerPlant = IMG_LoadTexture(renderer, "assets/MarioPowerPlant.png");
+	SDL_Texture* marioTubo = IMG_LoadTexture(renderer, "assets/MarioTubo.png");
+	SDL_Texture* marioBricksCollection = IMG_LoadTexture(renderer, "assets/MarioBricksCollection.png");
+	SDL_Texture* marioBricksWithCoinQues = IMG_LoadTexture(renderer, "assets/MarioBricksWithCoinQues.png");
 
 	/* which is destination rectangle and which is source rectangle
 	in the console window? */
@@ -89,6 +98,13 @@ int main(int argc, char **argv)
 	destinationRectangle.w = 1024;
 	destinationRectangle.h = 720;
 
+	SDL_Rect marioDest;
+	SDL_QueryTexture(marioHero, NULL, NULL, &marioDest.w, &marioDest.h);
+	marioDest.x = 0;
+	marioDest.y = 0;
+	marioDest.w = marioDest.w*0.1;
+	marioDest.h = marioDest.h*0.1;
+
 
 	// setting draw color of render with RBGA value (i.e value between 0-255)
 	SDL_SetRenderDrawColor(renderer, 255, 0, 168, 255); // CHANGE
@@ -108,6 +124,9 @@ int main(int argc, char **argv)
 
 	// drawing knight image // CHANGE
 	SDL_RenderCopy(renderer, marioBackgroundTexture, &sourceRectangle, &destinationRectangle); // CHANGE
+
+
+	SDL_RenderCopy(renderer, marioHero, NULL, &marioDest);
 
 	// swaping the buffers and showing our current frame that we have been drawing
 	SDL_RenderPresent(renderer);
