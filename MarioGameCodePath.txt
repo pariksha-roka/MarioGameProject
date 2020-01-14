@@ -8,7 +8,5 @@
 - Adding new folder "assets" in master folder "MarioGameProject" to add background image for title page
 - Setting the size of the image equal to the size of the window to set image as game main/base background image
 - Adding all the images to the background image for setting up title page
-- Setting size and positions of all the game elements.
-- Finally, the design of title page of this game is ready.
 
 
