@@ -3,8 +3,6 @@
 #include <string> // to use the string data type variables
 #include <SDL_image.h> // to include different types of images such as png and jpg
 
-
-
 using namespace std;
 
 /* we need this for SDL to work, need old 'main' signature 
@@ -62,7 +60,7 @@ int main(int argc, char **argv)
 
 	
 	// CONVERTING SURFACE TO TEXTURE
-	/* Textures are stored in gfx cards vram and is used for Hardware 
+	/* Textures are stored in gfx cards vram and is used for Hardware
 	rendering */
 	// we cannot access the pixel data of a texture directly
 	SDL_Texture* marioBackgroundTexture = SDL_CreateTextureFromSurface(renderer, marioBackgroundSurface); // CHANGE
@@ -70,6 +68,7 @@ int main(int argc, char **argv)
 	SDL_FreeSurface(marioBackgroundSurface); // CHANGE
 
 	// ADDING ALL THE IMAGES TO BE INCLUDED IN TITLE PAGE
+	SDL_Texture* marioTitle = IMG_LoadTexture(renderer, "assets/MarioTitle.png");
 	SDL_Texture* marioHero = IMG_LoadTexture(renderer, "assets/MarioHero.png");
 	SDL_Texture* marioEnemy = IMG_LoadTexture(renderer, "assets/MarioEnemy.png");
 	SDL_Texture* marioPowerPlant = IMG_LoadTexture(renderer, "assets/MarioPowerPlant.png");
@@ -98,13 +97,54 @@ int main(int argc, char **argv)
 	destinationRectangle.w = 1024;
 	destinationRectangle.h = 720;
 
+	SDL_Rect marioTitleDest;
+	SDL_QueryTexture(marioTitle, NULL, NULL, &marioTitleDest.w, &marioTitleDest.h);
+	marioTitleDest.x = 185;
+	marioTitleDest.y = 25;
+	marioTitleDest.w = marioTitleDest.w*0.90;
+	marioTitleDest.h = marioTitleDest.h*0.50;
+
 	SDL_Rect marioDest;
 	SDL_QueryTexture(marioHero, NULL, NULL, &marioDest.w, &marioDest.h);
-	marioDest.x = 0;
-	marioDest.y = 0;
-	marioDest.w = marioDest.w*0.1;
-	marioDest.h = marioDest.h*0.1;
+	marioDest.x = 400;
+	marioDest.y = 345;
+	marioDest.w = marioDest.w*0.12;
+	marioDest.h = marioDest.h*0.12;
 
+	SDL_Rect marioEnemyDest;
+	SDL_QueryTexture(marioEnemy, NULL, NULL, &marioEnemyDest.w, &marioEnemyDest.h);
+	marioEnemyDest.x = 900;
+	marioEnemyDest.y = 500;
+	marioEnemyDest.w = marioEnemyDest.w*0.1;
+	marioEnemyDest.h = marioEnemyDest.h*0.1;
+
+	SDL_Rect marioPowerPlantDest;
+	SDL_QueryTexture(marioPowerPlant, NULL, NULL, &marioPowerPlantDest.w, &marioPowerPlantDest.h);
+	marioPowerPlantDest.x = 690;
+	marioPowerPlantDest.y = 425;
+	marioPowerPlantDest.w = marioPowerPlantDest.w*0.1;
+	marioPowerPlantDest.h = marioPowerPlantDest.h*0.1;
+
+	SDL_Rect marioTuboDest;
+	SDL_QueryTexture(marioTubo, NULL, NULL, &marioTuboDest.w, &marioTuboDest.h);
+	marioTuboDest.x = 30;
+	marioTuboDest.y = 488;
+	marioTuboDest.w = marioTuboDest.w*0.3;
+	marioTuboDest.h = marioTuboDest.h*0.3;
+
+	SDL_Rect marioBricksCollectionDest;
+	SDL_QueryTexture(marioBricksCollection, NULL, NULL, &marioBricksCollectionDest.w, &marioBricksCollectionDest.h);
+	marioBricksCollectionDest.x = 130;
+	marioBricksCollectionDest.y = 490;
+	marioBricksCollectionDest.w = marioBricksCollectionDest.w*0.7;
+	marioBricksCollectionDest.h = marioBricksCollectionDest.h*0.7;
+
+	SDL_Rect marioBricksWithCoinQuesDest;
+	SDL_QueryTexture(marioBricksWithCoinQues, NULL, NULL, &marioBricksWithCoinQuesDest.w, &marioBricksWithCoinQuesDest.h);
+	marioBricksWithCoinQuesDest.x = 650;
+	marioBricksWithCoinQuesDest.y = 545;
+	marioBricksWithCoinQuesDest.w = marioBricksWithCoinQuesDest.w*0.5;
+	marioBricksWithCoinQuesDest.h = marioBricksWithCoinQuesDest.h*0.5;
 
 	// setting draw color of render with RBGA value (i.e value between 0-255)
 	SDL_SetRenderDrawColor(renderer, 255, 0, 168, 255); // CHANGE
@@ -125,9 +165,15 @@ int main(int argc, char **argv)
 	// drawing knight image // CHANGE
 	SDL_RenderCopy(renderer, marioBackgroundTexture, &sourceRectangle, &destinationRectangle); // CHANGE
 
-
+	// showing all the images on the console
+	SDL_RenderCopy(renderer, marioTitle, NULL, &marioTitleDest);
 	SDL_RenderCopy(renderer, marioHero, NULL, &marioDest);
-
+	SDL_RenderCopy(renderer, marioEnemy, NULL, &marioEnemyDest);
+	SDL_RenderCopy(renderer, marioPowerPlant, NULL, &marioPowerPlantDest);
+	SDL_RenderCopy(renderer, marioTubo, NULL, &marioTuboDest);
+	SDL_RenderCopy(renderer, marioBricksCollection, NULL, &marioBricksCollectionDest);
+	SDL_RenderCopy(renderer, marioBricksWithCoinQues, NULL, &marioBricksWithCoinQuesDest);
+	
 	// swaping the buffers and showing our current frame that we have been drawing
 	SDL_RenderPresent(renderer);
 

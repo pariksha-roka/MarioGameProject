@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>d:\Users\7019\Documents\Visual Studio 2015\Projects\MarioGameProject\MarioGameProject\Dependencies\include;$(IncludePath)</IncludePath>
-    <LibraryPath>d:\Users\7019\Documents\Visual Studio 2015\Projects\MarioGameProject\MarioGameProject\Dependencies\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>d:\Users\7019\Desktop\7019_Roka_Pariksha_GameTitleCode-Assignment 1 %281%29\MarioGameProject\MarioGameProject\Dependencies\include;C:\Users\parik\Downloads\MarioGameProject\MarioGameProject\Dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>d:\Users\7019\Desktop\7019_Roka_Pariksha_GameTitleCode-Assignment 1 %281%29\MarioGameProject\MarioGameProject\Dependencies\lib;C:\Users\parik\Downloads\MarioGameProject\MarioGameProject\Dependencies\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -1,5 +1,17 @@
 ﻿  main.cpp
-d:\users\7019\documents\visual studio 2015\projects\mariogameproject\mariogameproject\main.cpp(105): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\users\7019\documents\visual studio 2015\projects\mariogameproject\mariogameproject\main.cpp(106): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  MarioGameProject.vcxproj -> d:\Users\7019\Documents\Visual Studio 2015\Projects\MarioGameProject\Debug\MarioGameProject.exe
-  MarioGameProject.vcxproj -> d:\Users\7019\Documents\Visual Studio 2015\Projects\MarioGameProject\Debug\MarioGameProject.pdb (Partial PDB)
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(104): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(105): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(111): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(112): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(118): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(119): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(125): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(126): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(132): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(133): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(139): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(140): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(146): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\users\7019\desktop\7019_roka_pariksha_gametitlecode-assignment 1 (1)\mariogameproject\mariogameproject\main.cpp(147): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  MarioGameProject.vcxproj -> d:\Users\7019\Desktop\7019_Roka_Pariksha_GameTitleCode-Assignment 1 (1)\MarioGameProject\Debug\MarioGameProject.exe
+  MarioGameProject.vcxproj -> d:\Users\7019\Desktop\7019_Roka_Pariksha_GameTitleCode-Assignment 1 (1)\MarioGameProject\Debug\MarioGameProject.pdb (Partial PDB)
